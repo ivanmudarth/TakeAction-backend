@@ -1,0 +1,19 @@
+{
+  "name": "TakeAction",
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "description": "Take action on current events.",
+  "icons": { "16": "logo16.png", "48": "logo48.png", "128": "logo128.png" },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["contextMenus", "tabs"],
+  "web_accessible_resources": ["*.html"],
+  "content_security_policy": "script-src 'self' 'sha256-p5hOtlld76OubQRjuoOzFkH1phfMCtQyYciqJYR0hgk='; object-src 'self'"
+}
