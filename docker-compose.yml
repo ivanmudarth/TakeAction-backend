@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    pdfserver:
+        image: editsync/backend
+        build: ./backend
+        ports:
+        - 80:80
+        #auto update
+        volumes:
+            - ./backend:/app
+        environment:
+        # limits # of fastapi workers
+        - MAXWORKERS=2
+    
+        #auto refresh for deployment
+        command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--debug", "--port", "80", "--reload-dir", "/app"]

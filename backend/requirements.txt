@@ -1,0 +1,5 @@
+fastapi
+aiofiles
+bs4
+tensorflow
+keras
