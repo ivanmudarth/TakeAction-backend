@@ -1,19 +1,22 @@
+Demo: https://youtu.be/OB0jeGnNiqw
+
 ## Inspiration
 
-In a digital world where news and information can be shared in seconds, it can be hard to keep track of the many issues and crises that we should concern ourselves with. As well-meaning citizens of the world who also lead busy lives, we found this to be a common predicament that we faced. Thus, we came up with takeAction! in order to alleviate this problem.
+With the internet’s increasing influence on people’s lives, the internet has changed the fundamental nature in which we communicate and consume information. 
+
+Although there is a vast amount of information available with just an internet connection, there are many problems we face when interacting with news online. Some of these include too much information, irresponsible headlines/reporting, and a lack of ways to act on the information you read. **This is a particularly big issue when it comes to reporting on mental health and suicide.** Studies have shown that the way we talk about suicide publicly can have astounding consequences.
 
 ## What it does
 
-takeAction! is an extension for the Google Chrome Browser that the user can click on while viewing an article about a world issue such as COVID-19, the Black Lives Matter movement, or climate change. When it is clicked, it will give links for petitions and movements that the user can sign and participate in to help combat the issue. For example, upon viewing an article about carbon emissions, if the user clicks on our Chrome Extension, they will be given links such as petitions for the government to change their environmental policies.
+takeAction! is a google chrome extension that analyzes a webpage the user is currently on. Machine learning is then used to analyze the content of the webpage and detect if there is unethical or misleading reporting regarding mental health or suicide. If it is detected, articles are provided to the user to explain the misunderstood aspects of mental illness that are often exacerbated by the media.
+
+The extension also offers trusted organizations that the user can truly take action by donating to. Thus, our solution works in two ways: spreading awareness for mental health and the truth about suicide, and then bringing real change.
 
 ## How I built it
 
-Using Python for the backend and React Library with JavaScript for the frontend, we applied machine learning training in order for our program to detect the issue and provide links for petitions/movements.
+Our datasets were created through web scraping relevant articles. We then used state of the art NLP models developed in Tensorflow to categorize articles. A high validation accuracy was achieved by using a large dataset and extensive data preprocessing. 
 
-## Challenges I ran into
-
-We found it particularly challenging to build the actual data sets that we used for ML training, as these comprised of text documents that were easily thousands of lines long. The program took a while to accept the data sets as well.
-Additionally, we had to scrape hundreds of related websites in order to build an accurate model for our purposes.
+In addition, Our system architecture was developed with scalability and ease of use in mind. Technologies such as kubernetes, docker, Google cloud were used to ensure that we can scale to thousands of users at a time.
 
 ## Accomplishments that I'm proud of
 
@@ -21,8 +24,8 @@ After hours of hard work, we were extremely proud to see our program respond to 
 
 ## What I learned
 
-Prior to this project, a lot of our team members had little to no experience with ML, but as we dived into this project we learned valuable skills. The project was also a unique opportunity for us to brush up on our Python, React, and JavaScript skills.
+Prior to this project, our team members had little to no experience with ML, but as we dived into this project we learned valuable skills. The project was also a unique opportunity for us to brush up on our Python, React, and JavaScript skills.
 
 ## What's next for takeAction!
 
-In the future, we hope to hone our project further by improving the accuracy of the ML model and have it return links to resources that are both, directly and indirectly, related to the article's core issue. This would allow the user to identify with the issue more deeply and get involved in more nuanced ways.
+In the future, we hope to hone our project further by improving the accuracy of the ML model and have it return links to resources that are both, directly and indirectly, related to the article's core issue. Celebrity suicide reporting is just one consequence of mass media that poses a threat to mental health. We would like to broaden our product's use cases as there are many different issues that our quick and accessible extension can be used to solve.  
